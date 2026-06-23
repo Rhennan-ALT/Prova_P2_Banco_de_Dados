@@ -19,7 +19,7 @@ def cadastrar_pedido(pedido: Create,):
     collection.insert_one(novo_pedido.model_dump())
 
     mensagem = {
-        "id": novo_pedido["id"],
+        "id": novo_pedido.id,
         "evento": "PEDIDO_CRIADO"
     }
 
